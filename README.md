@@ -27,4 +27,4 @@ You can also use:
 Format options can be chained without needing multiple `§`s. For example, `§[red][u][i]text` will show red, bold, underlined text. You need to put the colour before the bold and underline. This is because the colour code resets the style to be coloured, but not italic, bold, etc. This is a minecraft thing, and also applies to vanilla formatting codes.
 
 # Use on servers
-If you want to use this mod on a server, this mod will have to be installed on it, or the server must otherwise allow you to send '§' in chat, or it will automatically kick you when you use formatting.
+If you want to use this mod on a server, this mod will have to be installed on it, or the server must otherwise allow you to send '§' in chat, or the server will automatically kick you when you use formatting.
