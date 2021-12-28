@@ -191,7 +191,7 @@ public class TextProcessingMixins
                 }
                 else
                 {
-                    builder.append(nextChar);
+                    builder.append(Character.toLowerCase(nextChar));
                 }
             }
         }
