@@ -86,6 +86,7 @@ public class TextProcessingMixins
         FORMAT_CODES.put("dark_" + colourName, darkCode);
 
         FORMAT_CODES.put("d_" + colourName, darkCode);
+        FORMAT_CODES.put("d " + colourName, darkCode);
         FORMAT_CODES.put("d" + colourName, darkCode);
 
         FORMAT_CODES.put(colourName + " dark", darkCode);
@@ -97,6 +98,7 @@ public class TextProcessingMixins
         FORMAT_CODES.put(colourName + "deep", darkCode);
 
         FORMAT_CODES.put(colourName + "_d", darkCode);
+        FORMAT_CODES.put(colourName + " d", darkCode);
         FORMAT_CODES.put(colourName + "d", darkCode);
 
         FORMAT_CODES.put(colourName, lightCode);
