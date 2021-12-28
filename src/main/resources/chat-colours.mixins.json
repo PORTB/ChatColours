@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "portb.chatcolours.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "chatcolours.refmap.json",
+  "mixins": [
+    "SharedConstantsMixins"
+  ],
+  "client": [
+    "client.TextProcessingMixins"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
