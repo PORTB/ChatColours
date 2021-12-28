@@ -14,8 +14,9 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.spongepowered.mixin'
 
-group = 'PORTB'
-version = '1.16-1.0'
+group = 'portb.chat-colours'
+archivesBaseName = 'chat-colours'
+version = '1.16-1.1'
 
 java {
     archivesBaseName = 'chat-colours'
@@ -156,7 +157,7 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "chatcolours",
+                "Specification-Title"     : "chat-colours",
                 //"Specification-Vendor": "chatcolours authors",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,

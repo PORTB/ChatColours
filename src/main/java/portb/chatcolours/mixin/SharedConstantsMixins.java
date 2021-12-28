@@ -10,7 +10,7 @@ import portb.chatcolours.ServerConfig;
 @Mixin(SharedConstants.class)
 public class SharedConstantsMixins
 {
-    @Inject(method = "isAllowedCharacter(C)Z", at = @At("RETURN"), cancellable = true)
+    @Inject(method = "Lnet/minecraft/util/SharedConstants;isAllowedCharacter(C)Z", at = @At("RETURN"), cancellable = true)
     private static void isAllowedCharacter(char c, CallbackInfoReturnable<Boolean> returnInfo)
     {
         if(ServerConfig.isEnabled.get())
