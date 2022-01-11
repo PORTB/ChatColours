@@ -1,26 +1,18 @@
 package portb.chatcolours.mixin.client;
 
-import net.minecraft.entity.ai.goal.InteractDoorGoal;
-import net.minecraft.util.ICharacterConsumer;
-import net.minecraft.util.Tuple;
-import net.minecraft.util.text.Style;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.TextProcessing;
+import net.minecraft.network.chat.Style;
+import net.minecraft.util.FormattedCharSink;
+import net.minecraft.util.StringDecomposer;
 import org.apache.commons.lang3.mutable.MutableInt;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import portb.chatcolours.ClientConfig;
 
-import java.lang.ref.Reference;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-@Mixin(TextProcessing.class)
+@Mixin(StringDecomposer.class)
 public class TextProcessingMixins
 {
     private static final Map<String, Character> FORMAT_CODES = new HashMap<>();
@@ -135,8 +127,8 @@ public class TextProcessingMixins
         return max;
     }
 
-    @ModifyVariable(method = "func_238340_a_", at = @At("HEAD"), ordinal = 0, argsOnly = true)
-    private static String iterateFormatted(String str, String p_238340_0_, int start, Style style, Style defaultStyle, ICharacterConsumer p_238340_4_)
+    @ModifyVariable(method = "iterateFormatted(Ljava/lang/String;ILnet/minecraft/network/chat/Style;Lnet/minecraft/network/chat/Style;Lnet/minecraft/util/FormattedCharSink;)Z", at = @At("HEAD"), ordinal = 0, argsOnly = true)
+    private static String iterateFormatted(String str, String p_238340_0_, int start, Style style, Style defaultStyle, FormattedCharSink p_238340_4_)
     {
         if(!ClientConfig.isExtendedSyntaxEnabled.get() || !ClientConfig.isEnabled.get())
             return str;
